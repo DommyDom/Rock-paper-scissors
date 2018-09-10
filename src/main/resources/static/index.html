@@ -1,0 +1,56 @@
+<!Doctype html>
+
+<html>
+
+<head>
+    <title>Rock paper scissors</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/app.js"></script>
+</head>
+
+<body>
+
+	<div class="navbar">
+		<h1>Rock paper Scissors</h1>
+		<input placeholder="name" id="name" type="text" />
+		<button onClick="connect()">Connect</button>
+		<button onClick="disconnect()">Disconnect</button>
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12" id ="game">
+				<p>player 1: <span id="player1">tbd</span> <br> player 2: <span id="player2">tbd</span> </p>
+				<div id="score">
+					<p>Player1 score: <span id="score1">0</span></p>
+					<p>player2 score: <span id="score2">0</span></p>
+				</div>
+				<div align="center" class="panel">
+				<div class="panel-body" id="status">
+					player1 <span id="choosing1">chosing</span>, player2 <span id="choosing2">choosing</span><br>
+					<span id="winner">player x wins</span>
+					<span id="choice"></span>
+					<span id="warning">warning</span>
+				</div>
+				</div>
+				
+				<div align="center">
+					<ul  id="choises">
+						<li><button onclick ="choose(1)">Rock</button></li>
+						<li><button onClick = "choose(2)">paper</button></li>
+						<li><button onClick ="choose(3)">Scissors</button></li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+</body>
+
+</html>
